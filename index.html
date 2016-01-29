@@ -1,0 +1,41 @@
+---
+title: Napkin
+layout: default
+header:
+    title: Napkin
+    sub-title: Introducting the quickest way to write a note on any device.
+text:
+    - Write a note in under a second
+    - Napkin enables you to take a note while your phone is locked
+    - You can come back and view or edit your napkins
+    - With GPS you will be able to remember where you took your notes
+footer-cta: Get it on Google Play
+social-links:
+    - icon: facebook
+      link: https://www.facebook.com/WriteANapkin/
+    - icon: twitter
+      twitter: https://twitter.com/writeanapkin
+---
+<header class="header">
+    <h1 class="header--title">{{page.header.title}}</h1>
+    <h2 class="header--sub-title">
+        {{page.header.sub-title}}
+    </h2>
+    {% for social in page.social-links %}
+        <a href="{{social.link}}" target="_blank" class="base--a">
+            {{social.icon}}
+        </a>
+    {% endfor %}
+</header>
+<main>
+    {% for seciton in page.text %}
+        <section>
+            <p>
+                {{seciton}}
+            </p>
+        </section>
+    {% endfor %}
+</main>
+<footer>
+    {{ page.footer-cta }}
+</footer>
