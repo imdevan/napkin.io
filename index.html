@@ -18,20 +18,22 @@ social-links:
       twitter: https://twitter.com/writeanapkin
 ---
 <header class="header">
-    <nav class="social">
-        {{% for social in page.social-links %}}
-            <a href="{{social.link}}" target="_blank" class="base--a">
-                {{social.icon}}
-            </a>
-        {{% endfor %}}
-    </nav>
-    <h1 class="header--title">{{page.header.title}}</h1>
-    <h2 class="header--sub-title">
-        {{page.header.sub-title}}
-    </h2>
-    <a href="https://play.google.com/store/apps/details?id=life.napkin&hl=en" class="call-to-action">
-        {{page.call-to-action}}
-    </a>
+    <div class="header--body">
+        <nav class="social">
+            {{% for social in page.social-links %}}
+                <a href="{{social.link}}" target="_blank" class="base--a">
+                    {{social.icon}}
+                </a>
+            {{% endfor %}}
+        </nav>
+        <h1 class="header--title">{{page.header.title}}</h1>
+        <h2 class="header--sub-title">
+            {{page.header.sub-title}}
+        </h2>
+        <a href="https://play.google.com/store/apps/details?id=life.napkin&hl=en" class="call-to-action">
+            {{page.call-to-action}}
+        </a>
+    </div>
 </header>
 <main>
     {% for seciton in page.text %}

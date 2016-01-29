@@ -1,7 +1,10 @@
 .header {
-    @extend %container;
     background: $purple;
     color: $white;
+
+    &--body {
+        @extend %container;
+    }
 
     &--title {
 

@@ -1,5 +1,7 @@
 %container {
-    padding: 5rem;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
 }
 
 body {
@@ -7,4 +9,8 @@ body {
     font-family: helvetica;
     padding: 0;
     margin: 0;
+}
+
+main {
+    @extend %container;
 }
