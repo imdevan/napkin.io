@@ -14,3 +14,8 @@ body {
 main {
     @extend %container;
 }
+
+footer {
+    background: $black;
+    color: $white;
+}
