@@ -4,6 +4,7 @@ layout: default
 header:
     title: Napkin
     sub-title: Introducting the quickest way to write a note on any device.
+call-to-action: Let's go!
 text:
     - Write a note in under a second
     - Napkin enables you to take a note while your phone is locked
@@ -17,19 +18,24 @@ social-links:
       twitter: https://twitter.com/writeanapkin
 ---
 <header class="header">
+    <nav class="social">
+        {{% for social in page.social-links %}}
+            <a href="{{social.link}}" target="_blank" class="base--a">
+                {{social.icon}}
+            </a>
+        {{% endfor %}}
+    </nav>
     <h1 class="header--title">{{page.header.title}}</h1>
     <h2 class="header--sub-title">
         {{page.header.sub-title}}
     </h2>
-    {% for social in page.social-links %}
-        <a href="{{social.link}}" target="_blank" class="base--a">
-            {{social.icon}}
-        </a>
-    {% endfor %}
+    <a href="https://play.google.com/store/apps/details?id=life.napkin&hl=en" class="call-to-action">
+        {{page.call-to-action}}
+    </a>
 </header>
 <main>
     {% for seciton in page.text %}
-        <section>
+        <section class="section">
             <p>
                 {{seciton}}
             </p>
